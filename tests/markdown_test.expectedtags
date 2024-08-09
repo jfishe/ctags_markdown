@@ -1,0 +1,28 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/;"	extras:pseudo
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/;"	extras:pseudo
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//;"	extras:pseudo
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/;"	extras:pseudo
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/;"	extras:pseudo
+!_TAG_PROGRAM_VERSION	5.9.0	/80ee839/;"	extras:pseudo
+!_TAG_FILE_ENCODING	UTF-8	//;"	extras:pseudo
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/;"	extras:pseudo
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/;"	extras:pseudo
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/;"	extras:pseudo
+!_TAG_PROC_CWD	C:/Users/jdfen/Github/ctags_markdown/	//;"	extras:pseudo
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/;"	extras:pseudo
+Heading L1 Chapter	markdown_test.md	/^# Heading L1 Chapter$/;"	c	end:52
+Heading L2 Section	markdown_test.md	/^## Heading L2 Section$/;"	s	chapter:Heading L1 Chapter	end:52
+Heading L3	markdown_test.md	/^### Heading L3$/;"	S	section:Heading L1 Chapter""Heading L2 Section	end:52
+Heading L4	markdown_test.md	/^#### Heading L4$/;"	t	subsection:Heading L1 Chapter""Heading L2 Section""Heading L3	end:52
+Heading L5	markdown_test.md	/^##### Heading L5$/;"	T	subsubsection:Heading L1 Chapter""Heading L2 Section""Heading L3""Heading L4	end:52
+Heading L6	markdown_test.md	/^###### Heading L6$/;"	u	l4subsection:Heading L1 Chapter""Heading L2 Section""Heading L3""Heading L4""Heading L5	end:52
+tag1	markdown_test.md	/^  - tag1$/;"	d	extras:subparser
+tag-dash-2	markdown_test.md	/^  - tag-dash-2$/;"	d	extras:subparser
+tag_3	markdown_test.md	/^  - tag_3$/;"	d	extras:subparser
+tag/4	markdown_test.md	/^  - tag\/4$/;"	d	extras:subparser
+inlinetag1	markdown_test.md	/^:inlinetag1:$/;"	e	extras:subparser
+inlinetag-tag.2	markdown_test.md	/^:inlinetag-tag.2:inlinetag_3:$/;"	e	extras:subparser
+inlinetag_3	markdown_test.md	/^:inlinetag-tag.2:inlinetag_3:$/;"	e	extras:subparser
+inlinetag-tag/4	markdown_test.md	/^:inlinetag-tag\/4:inlinetag5:$/;"	e	extras:subparser
+inlinetag5	markdown_test.md	/^:inlinetag-tag\/4:inlinetag5:$/;"	e	extras:subparser
+Title Heading	markdown_test.md	/^title: Title Heading$/;"	t	extras:subparser

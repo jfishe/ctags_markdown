@@ -1,0 +1,5 @@
+--verbose=yes
+--recurse=yes
+--sort=no
+# Relative tags allow tests to be path insensitive.
+--tag-relative=always
