@@ -38,7 +38,9 @@ type: note
 ##### Heading L5
 
 ```bash
-ctags --options=.gutctags --list-kinds-full
+ctags --list-kinds-full=Markdown
+ctags --list-kinds-full=FrontMatter
+ctags --list-kinds-full=notes
 ```
 
 ###### Heading L6

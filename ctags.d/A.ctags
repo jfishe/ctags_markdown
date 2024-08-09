@@ -3,3 +3,5 @@
 --sort=no
 # Relative tags allow tests to be path insensitive.
 --tag-relative=always
+# Include language for reference because Markdown and FrontMatter re-use LETTER.
+--fields=+{language}
