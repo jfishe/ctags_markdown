@@ -15,9 +15,10 @@
 
 --_mtable-regex-notes=main/---//{tenter=frontmatter}
 --_mtable-regex-notes=main/:([a-zA-Z][-._\/a-zA-Z0-9]*):/\1/e/{mgroup=1}{_advanceTo=1end}
+--_mtable-regex-notes=main/#([a-zA-Z][-._\/a-zA-Z0-9]*)\s/\1/e/{mgroup=1}{_advanceTo=1end}
 --_mtable-regex-notes=main/.//
 
---_mtable-regex-notes=frontmatter/^tags: *//{tenter=fmtags}
+# --_mtable-regex-notes=frontmatter/^tags: *//{tenter=fmtags}
 --_mtable-regex-notes=frontmatter/---//{tleave}
 --_mtable-regex-notes=frontmatter/.//
 

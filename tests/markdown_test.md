@@ -26,12 +26,14 @@ type: note
 
 :inlinetag-tag/4:inlinetag5:
 
+ #inlinetag6 #inlinetag7
+
 [pcre current doc html pcre2syntax](https://www.pcre.org/current/doc/html/pcre2syntax.html)
 
 ### Heading L3
 
 - `doctag` regex incorrectly includes the `YAML` key following 'tag:',
-  'bibliography:' in this case.
+  'bibliography:' in this case. #inlinetag8
 
 #### Heading L4
 
