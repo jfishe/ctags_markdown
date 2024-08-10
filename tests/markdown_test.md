@@ -47,6 +47,7 @@ ctags --list-kinds-full=notes
 
 | LETTER | NAME          | DESCRIPTION         |
 | ------ | ------------- | ------------------- |
+| t      | title         | titles              |
 | c      | chapter       | chapters            |
 | s      | section       | sections            |
 | S      | subsection    | subsections         |
