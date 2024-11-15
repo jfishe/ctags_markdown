@@ -16,6 +16,11 @@ Heading L3	markdown_test.md	/^### Heading L3$/;"	S	language:Markdown	section:Hea
 Heading L4	markdown_test.md	/^#### Heading L4$/;"	t	language:Markdown	subsection:Heading L1 Chapter""Heading L2 Section""Heading L3	end:60
 Heading L5	markdown_test.md	/^##### Heading L5$/;"	T	language:Markdown	subsubsection:Heading L1 Chapter""Heading L2 Section""Heading L3""Heading L4	end:60
 Heading L6	markdown_test.md	/^###### Heading L6$/;"	u	language:Markdown	l4subsection:Heading L1 Chapter""Heading L2 Section""Heading L3""Heading L4""Heading L5	end:60
+tag1	markdown_test.md	/^  - tag1$/;"	d	language:notes	extras:subparser
+tag-dash-2	markdown_test.md	/^  - tag-dash-2$/;"	d	language:notes	extras:subparser
+tag_3	markdown_test.md	/^  - tag_3$/;"	d	language:notes	extras:subparser
+tag/4	markdown_test.md	/^  - tag\/4$/;"	d	language:notes	extras:subparser
+bibliography	markdown_test.md	/^bibliography: zk.bib$/;"	d	language:notes	extras:subparser
 inlinetag1	markdown_test.md	/^:inlinetag1:$/;"	e	language:notes	extras:subparser
 inlinetag-tag.2	markdown_test.md	/^:inlinetag-tag.2:inlinetag_3:$/;"	e	language:notes	extras:subparser
 inlinetag_3	markdown_test.md	/^:inlinetag-tag.2:inlinetag_3:$/;"	e	language:notes	extras:subparser

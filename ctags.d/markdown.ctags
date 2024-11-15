@@ -14,16 +14,19 @@
 --_tabledef-notes=fmtags
 
 --_mtable-regex-notes=main/---//{tenter=frontmatter}
+# Capture :vimwiki-syntax-tags:
 --_mtable-regex-notes=main/:([a-zA-Z][-._\/a-zA-Z0-9]*):/\1/e/{mgroup=1}{_advanceTo=1end}
+# Capture #markdown-syntax-tags
 --_mtable-regex-notes=main/#([a-zA-Z][-._\/a-zA-Z0-9]*)\s/\1/e/{mgroup=1}{_advanceTo=1end}
 --_mtable-regex-notes=main/.//
 
-# --_mtable-regex-notes=frontmatter/^tags: *//{tenter=fmtags}
+# YAML metadata, tags:
+--_mtable-regex-notes=frontmatter/^tags: *//{tenter=fmtags}
 --_mtable-regex-notes=frontmatter/---//{tleave}
 --_mtable-regex-notes=frontmatter/.//
 
 --_mtable-regex-notes=fmtags/([a-zA-Z][-._\/a-zA-Z0-9]*)/\1/d/
 --_mtable-regex-notes=fmtags/\]///{tleave}
---_mtable-regex-notes=fmtags/:///{_advanceTo=0start}{tleave}
+--_mtable-regex-notes=fmtags/:///{tleave}
 --_mtable-regex-notes=fmtags/---///{tleave}{_advanceTo=0start}
 --_mtable-regex-notes=fmtags/.///

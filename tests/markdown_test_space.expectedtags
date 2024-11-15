@@ -10,4 +10,9 @@
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/;"	extras:pseudo
 !_TAG_PROC_CWD	C:/Users/jdfen/Github/ctags_markdown/	//;"	extras:pseudo
 !_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/;"	extras:pseudo
+tag1	markdown_test_space.md	/^tags: tag1 tag-dash-2 tag_3 tag\/4$/;"	d	language:notes	extras:subparser
+tag-dash-2	markdown_test_space.md	/^tags: tag1 tag-dash-2 tag_3 tag\/4$/;"	d	language:notes	extras:subparser
+tag_3	markdown_test_space.md	/^tags: tag1 tag-dash-2 tag_3 tag\/4$/;"	d	language:notes	extras:subparser
+tag/4	markdown_test_space.md	/^tags: tag1 tag-dash-2 tag_3 tag\/4$/;"	d	language:notes	extras:subparser
+bibliography	markdown_test_space.md	/^bibliography: zk.bib$/;"	d	language:notes	extras:subparser
 Title Heading	markdown_test_space.md	/^title: Title Heading$/;"	t	language:FrontMatter	extras:subparser
