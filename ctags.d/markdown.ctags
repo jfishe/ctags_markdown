@@ -1,6 +1,11 @@
---fields=+{extras}
---fields=+{end}
+# Include language for reference because Markdown and FrontMatter re-use LETTER "t".
+--fields=+{language}
+# Enable FrontMatter subparser, if available.
 --extras=+{guest}
+
+# Concatenate the line number and pattern with a semicolon in between.
+# Similar to Vimwiki Tags https://github.com/vimwiki/vimwiki
+--excmd=combine
 
 --input-encoding=UTF-8
 --output-encoding=UTF-8

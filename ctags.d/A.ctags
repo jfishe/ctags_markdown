@@ -3,11 +3,7 @@
 # Relative tags allow tests to be path insensitive.
 --tag-relative=always
 
-# Include language for reference because Markdown and FrontMatter re-use LETTER.
---fields=+{language}
-
 # Exclude
 --exclude=.ctags
 --exclude=.ctags.d
 --exclude=ctags.d
---exclude=Session.vim
