@@ -1,18 +1,18 @@
-!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/;"	extras:pseudo
-!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/;"	extras:pseudo
-!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//;"	extras:pseudo
-!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/;"	extras:pseudo
-!_TAG_PROGRAM_URL	https://ctags.io/	/official site/;"	extras:pseudo
-!_TAG_PROGRAM_VERSION	5.9.0	/80ee839/;"	extras:pseudo
-!_TAG_FILE_ENCODING	UTF-8	//;"	extras:pseudo
-!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/;"	extras:pseudo
-!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/;"	extras:pseudo
-!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/;"	extras:pseudo
-!_TAG_PROC_CWD	C:/Users/jdfen/Github/ctags_markdown/	//;"	extras:pseudo
-!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/;"	extras:pseudo
-tag1	markdown_test_space.md	/^tags: tag1 tag-dash-2 tag_3 tag\/4$/;"	d	language:notes	extras:subparser
-tag-dash-2	markdown_test_space.md	/^tags: tag1 tag-dash-2 tag_3 tag\/4$/;"	d	language:notes	extras:subparser
-tag_3	markdown_test_space.md	/^tags: tag1 tag-dash-2 tag_3 tag\/4$/;"	d	language:notes	extras:subparser
-tag/4	markdown_test_space.md	/^tags: tag1 tag-dash-2 tag_3 tag\/4$/;"	d	language:notes	extras:subparser
-bibliography	markdown_test_space.md	/^bibliography: zk.bib$/;"	d	language:notes	extras:subparser
-Title Heading	markdown_test_space.md	/^title: Title Heading$/;"	t	language:FrontMatter	extras:subparser
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/80ee839/
+!_TAG_FILE_ENCODING	UTF-8	//
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	C:/Users/jdfen/Github/ctags_markdown/	//
+!_TAG_OUTPUT_EXCMD	combineV2	/number, pattern, mixed, or combineV2/
+tag1	markdown_test_space.md	3;/^tags: tag1 tag-dash-2 tag_3 tag\/4$/;"	d	language:notes
+tag-dash-2	markdown_test_space.md	3;/^tags: tag1 tag-dash-2 tag_3 tag\/4$/;"	d	language:notes
+tag_3	markdown_test_space.md	3;/^tags: tag1 tag-dash-2 tag_3 tag\/4$/;"	d	language:notes
+tag/4	markdown_test_space.md	3;/^tags: tag1 tag-dash-2 tag_3 tag\/4$/;"	d	language:notes
+bibliography	markdown_test_space.md	4;/^bibliography: zk.bib$/;"	d	language:notes
+Title Heading	markdown_test_space.md	2;/^title: Title Heading$/;"	t	language:FrontMatter
