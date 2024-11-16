@@ -12,7 +12,11 @@ status: Reviewed
 type: note
 ---
 
+<!-- markdownlint-disable MD025 -->
+
 # Heading L1 Chapter
+
+<!-- markdownlint-enable MD025 -->
 
 - [github universal ctags issues 3020](https://github.com/universal-ctags/ctags/issues/3020#issuecomment-839284103)
 - [github universal ctags ctags blob parsers markdown h](https://github.com/universal-ctags/ctags/blob/8904e850e9623abcff91ee057b64ab72cd3f8e6f/parsers/markdown.h)
@@ -34,6 +38,9 @@ type: note
 
 - `doctag` regex incorrectly includes the `YAML` key following 'tag:',
   'bibliography:' in this case. #inlinetag8
+- Vimwiki inline tags should be at least 2 characters to avoid matching:
+  - [SharePoint URL containing :f:](https://somewhere.sharepoint.com/:f:/r/sites/some_site/Shared%20Documents/some_doc?csf=1&web=1&e=8QtXVg)
+  - [Windows Drive Letter in URL](file:S:/some_folder/some_file.docx)
 
 #### Heading L4
 
