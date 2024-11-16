@@ -13,10 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Archive Release
+    - name: Archive Release Zip
       uses: thedoctor0/zip-release@0.7.5
       with:
         type: 'zip'
         filename: 'release.zip'
         path: 'ctags.d'
-        exclusions: '*.git* /*node_modules/* .editorconfig'
+    - name: Archive Release Tar
+      uses: thedoctor0/zip-release@0.7.5
+      with:
+        type: 'tar'
+        filename: 'release.tar'
+        path: 'ctags.d'
