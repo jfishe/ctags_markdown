@@ -3,7 +3,7 @@
 
 .VERSION 1.0
 
-.GUID eef73233-86d1-4564-8cfd-1495effdad75
+.GUID 2226393d-20b7-4def-9645-d4a1d85e870b
 
 .AUTHOR jdfenw@gmail.com
 
@@ -35,7 +35,7 @@
 <#
 
 .DESCRIPTION
- Invoke ctags and compare expected tags file.
+ Invoke ctags to generate expected tags files.
 
 #>
 [CmdletBinding()]
@@ -43,7 +43,7 @@ Param()
 
 $exe = Get-Command 'ctags'
 
-$PathCtags = Get-Item -Path "$PSScriptRoot\ctags.d"
+$PathCtags = (Get-Item -Path "$PSScriptRoot\ctags.d")
 $PathTest = Get-ChildItem -Path "$PSScriptRoot\tests\*.md"
 
 $Parameters = @(
@@ -53,10 +53,9 @@ $Parameters = @(
 
 foreach ($item in $PathTest) {
     $TagsOut = "$($item.Directory)\$($item.BaseName)"
-    &$exe $Parameters -o "$TagsOut.tags" $item 2> "$TagsOut.out"
-    $ReferenceObject = Get-Content -Path "$TagsOut.tags"
-    $DifferenceObject = Get-Content -Path "$TagsOut.expectedtags"
-    Write-Verbose "${TagsOut}.tags"
-    Write-Verbose "${TagsOut}.expectedtags"
-    Compare-Object -ReferenceObject $ReferenceObject -DifferenceObject $DifferenceObject
+    $Outfile = "${TagsOut}.expectedtags"
+    Remove-Item $Outfile -ErrorAction SilentlyContinue
+    Write-Verbose $item
+    Write-Verbose $Outfile
+    &$exe $Parameters -o "$Outfile" "$item"
 }
