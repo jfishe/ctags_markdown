@@ -89,5 +89,10 @@ ctags --list-extras
 
 ## Installation
 
+- Download archive, `release.tar.gz` or `release.zip`, from
+  [GitHub Releases](https://github.com/jfishe/ctags_markdown/releases).
+- Extract the contents of the archive folder `ctags.d` to one of the locations
+  expected by [Universal Ctags][Universal Ctags], e.g., `~/.ctags.d` or
+  `<project root>/.ctags.d`.
 
 [Universal Ctags]: https://ctags.io/
