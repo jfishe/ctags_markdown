@@ -2,6 +2,35 @@
 
 [Universal Ctags][Universal Ctags] parser for Markdown tags in various formats.
 
+Commas are not allowed because they separate array elememts.
+`[a-zA-Z0-9]` may start a tag.
+`[-._]` are also allowed after the first character.
+VimWiki syntax tags start with letters.
+
+```markdown
+---
+tags: [a, b, 123, a-._]
+---
+```
+
+```markdown
+---
+tags:
+  - a
+  - b
+  - 1-._
+  - a-._
+---
+```
+
+```markdown
+ #abc #123
+```
+
+```markdown
+:abc:a123-._:
+```
+
 - Start from [Michał Góral's Ctags For Markdown Notes](https://goral.net.pl/post/ctags-for-notes/).
 - Extend the default Markdown `langdef` with `notes`.
 - Enable `guest` parser to tag `YAML` titles.
