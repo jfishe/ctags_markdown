@@ -23,8 +23,8 @@
 # Capture :vimwiki-syntax-tags:
 # with at least 2 characters to ignore SharePoint and Windows Drive letters.
 --_mtable-regex-notes=main/:([a-zA-Z][-._\/a-zA-Z0-9]{2,}):/\1/e/{mgroup=1}{_advanceTo=1end}
-# Capture #markdown-syntax-tags
---_mtable-regex-notes=main/#([a-zA-Z0-9][-._\/a-zA-Z0-9]*)\s/\1/e/{mgroup=1}{_advanceTo=1end}
+# Capture #markdown-syntax-tags not needed since https://docs.ctags.io/en/latest/news/6-1-0.html
+# --_mtable-regex-notes=main/#([a-zA-Z0-9][-._\/a-zA-Z0-9]*)\s/\1/e/{mgroup=1}{_advanceTo=1end}
 --_mtable-regex-notes=main/.//
 
 # YAML metadata, tags:
