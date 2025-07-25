@@ -1,6 +1,6 @@
 # ctags_markdown
 
-[Universal Ctags][Universal Ctags] parser for Markdown tags in various formats.
+[Universal Ctags] parser for Markdown tags in various formats.
 
 Commas are not allowed because they separate array elememts.
 `[a-zA-Z0-9]` may start a tag.
@@ -24,10 +24,6 @@ tags:
 ```
 
 ```markdown
- #abc #123
-```
-
-```markdown
 :abc:a123-._:
 ```
 
@@ -48,12 +44,13 @@ ctags --list-kinds-full=notes
 ```
 
 | LETTER | NAME          | ENABLED | REFONLY | NROLES | MASTER | DESCRIPTION |
-|--------|---------------|---------|---------|--------|--------|-------------|
+| ------ | ------------- | ------- | ------- | ------ | ------ | ----------- |
 | S      | subsection    | yes     | no      | 0      | NONE   | level 2     |
 |        |               |         |         |        |        | sections    |
 | T      | l4subsection  | yes     | no      | 0      | NONE   | level 4     |
 |        |               |         |         |        |        | sections    |
 | c      | chapter       | yes     | no      | 0      | NONE   | chapters    |
+| h      | hashtag       | yes     | no      | 0      | NONE   | hashtags    |
 | n      | footnote      | yes     | no      | 0      | NONE   | footnotes   |
 | s      | section       | yes     | no      | 0      | NONE   | sections    |
 | t      | subsubsection | yes     | no      | 0      | NONE   | level 3     |
@@ -64,7 +61,7 @@ ctags --list-kinds-full=notes
 | d      | doctag        | yes     | no      | 0      | NONE   | doctags     |
 | e      | tag           | yes     | no      | 0      | NONE   | tags        |
 
-Titles is not available in earlier versions of [Universal Ctags][Universal Ctags].
+Titles is not available in earlier versions of [Universal Ctags].
 
 ## Universal ctags configuration
 
@@ -91,26 +88,27 @@ ctags.d
 ctags --list-subparsers=Markdown
 ```
 
-| NAME  | BASEPARSER | DIRECTIONS           |
-|-------|------------|----------------------|
-| notes | Markdown   | base => sub {shared} |
+| NAME  | BASEPARSER | DIRECTIONS            |
+| ----- | ---------- | --------------------- |
+| notes | Markdown   | base => sub \{shared} |
 
 ```bash
 ctags --list-fields
 ```
 
-| LETTER | NAME     | ENABLED | LANGUAGE | JSTYPE | FIXED | OP | DESCRIPTION    |
-|--------|----------|---------|----------|--------|-------|----|----------------|
-| l      | language | yes     | NONE     | s--    | no    | -- | Language of    |
-|        |          |         |          |        |       |    | input file     |
-|        |          |         |          |        |       |    | containing tag |
+| LETTER | NAME     | ENABLED | LANGUAGE | JSTYPE | FIXED | OP  | DESCRIPTION   |
+| ------ | -------- | ------- | -------- | ------ | ----- | --- | ------------- |
+| l      | language | yes     | NONE     | s--    | no    | --  | Language of   |
+|        |          |         |          |        |       |     | input file    |
+|        |          |         |          |        |       |     | containing    |
+|        |          |         |          |        |       |     | tag           |
 
 ```bash
 ctags --list-extras
 ```
 
 | LETTER | NAME      | ENABLED | LANGUAGE | FIXED | DESCRIPTION            |
-|--------|-----------|---------|----------|-------|------------------------|
+| ------ | --------- | ------- | -------- | ----- | ---------------------- |
 | g      | guest     | yes     | NONE     | no    | Include tags generated |
 |        |           |         |          |       | by guest parsers       |
 | s      | subparser | yes     | NONE     | no    | Include tags generated |
@@ -121,7 +119,33 @@ ctags --list-extras
 - Download archive, `release.tar.gz` or `release.zip`, from
   [GitHub Releases](https://github.com/jfishe/ctags_markdown/releases).
 - Extract the contents of the archive folder `ctags.d` to one of the locations
-  expected by [Universal Ctags][Universal Ctags], e.g., `~/.ctags.d` or
+  expected by [Universal Ctags], e.g., `~/.ctags.d` or
   `<project root>/.ctags.d`.
 
-[Universal Ctags]: https://ctags.io/
+## Testing
+
+To compare against expected output:
+
+```powershell
+.\Invoke-Test.ps1
+```
+
+or
+
+```bash
+./runtests.sh action1
+```
+
+To update the expected output:
+
+```powershell
+.\Update-TestExpected.ps1
+```
+
+or
+
+```bash
+./runtests.sh action2
+```
+
+[universal ctags]: https://ctags.io/

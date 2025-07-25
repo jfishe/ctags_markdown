@@ -41,7 +41,8 @@
 [CmdletBinding()]
 Param()
 
-$exe = Get-Command 'ctags'
+$ctags_exe = Get-Command 'ctags'
+$readtags_exe = Get-Command 'readtags'
 
 $PathCtags = Get-Item -Path "$PSScriptRoot\ctags.d"
 $PathTest = Get-ChildItem -Path "$PSScriptRoot\tests\*.md"
@@ -51,11 +52,16 @@ $Parameters = @(
         "--sort=no"
         )
 
+$ReadTags_Parameters = @(
+    "--list",
+    "--extension-fields",
+    "--line-number"
+    )
 foreach ($item in $PathTest) {
     $TagsOut = "$($item.Directory)\$($item.BaseName)"
-    &$exe $Parameters -o "$TagsOut.tags" $item 2> "$TagsOut.out"
-    $ReferenceObject = Get-Content -Path "$TagsOut.tags"
-    $DifferenceObject = Get-Content -Path "$TagsOut.expectedtags"
+    &$ctags_exe $Parameters -o "$TagsOut.tags" $item 2> "$TagsOut.out"
+    $DifferenceObject = &$readtags_exe --tag-file "$TagsOut.tags" $ReadTags_Parameters
+    $ReferenceObject = &$readtags_exe --tag-file "$TagsOut.expectedtags" $ReadTags_Parameters
     Write-Verbose "${TagsOut}.tags"
     Write-Verbose "${TagsOut}.expectedtags"
     Compare-Object -ReferenceObject $ReferenceObject -DifferenceObject $DifferenceObject
